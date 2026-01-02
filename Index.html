@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A FAZENDIX - O JOGO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="ui-container">
+        <div class="panel" id="status-panel">
+            <h1>A FAZENDIX</h1>
+            <p id="info-fase">Fase: Inicializando...</p>
+            <p id="info-tempo">Dia 1 - Manhã</p>
+        </div>
+
+        <div class="panel" id="voto-panel" style="display:none;">
+            <h2 id="voto-titulo">VOTAÇÃO</h2>
+            <div id="lista-voto"></div>
+            <button onclick="confirmarVoto()">Confirmar Voto</button>
+        </div>
+
+        <div class="panel" id="resultado-panel" style="display:none;">
+            <h2 id="res-titulo">ELIMINAÇÃO</h2>
+            <p id="res-texto"></p>
+            <div id="porcentagens"></div>
+            <button onclick="proximaEtapa()">Continuar</button>
+        </div>
+        
+        <div id="log-mensagens"></div>
+    </div>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+    <script type="module" src="game.js"></script>
+</body>
+</html>
